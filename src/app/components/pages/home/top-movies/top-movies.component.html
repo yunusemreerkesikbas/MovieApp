@@ -1,0 +1,8 @@
+  <div class="slider-container mt-5">
+    <div class="slide relative" *ngFor="let movie of movies; let i = index" routerLink="/movie/{{movie.id}}">
+      <img [src]="getImageUrl(movie.backdrop_path)" class="h-[200px] object-cover rounded-lg " alt="Slide" />
+      <span class="text-9xl absolute left-[-10px] bottom-[-30px] text-[#0296E5]"
+        >{{i+1}}</span
+      >
+    </div>
+  </div>

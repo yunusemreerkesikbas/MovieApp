@@ -1,0 +1,25 @@
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Kaydırma çubuğunu gizler */
+  -ms-overflow-style: none; /* Internet Explorer için kaydırma çubuğunu gizler */
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none; /* WebKit tarayıcıları için kaydırma çubuğunu gizler */
+}
+
+
+.slide {
+  flex: 0 0 calc(50% - 10px); /* Mobilde iki slaytı sığdırmak için yarı genişlik */
+  margin-right: 30px;
+}
+
+.slide:last-child {
+  margin-right: 0; /* Son slaytta sağ kenar boşluğu olmasın */
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+}

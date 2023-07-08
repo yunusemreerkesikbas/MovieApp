@@ -1,0 +1,23 @@
+<!-- search.component.html -->
+<div class="container">
+  <div class="">
+    <div class="relative">
+      <input
+        class="flex items-center px-5 py-2 border rounded-lg w-full bg-[#3A3F47] text-white"
+        placeholder="Search"
+        [(ngModel)]="filterText"
+        (input)="onFilterTextChange()"
+
+      />
+      <span
+        class="mr-2 absolute right-0 flex justify-center items-center top-0 bottom-0"
+      >
+        <img src="../../../assets/images/search.svg" class="" alt="" />
+      </span>
+
+    </div>
+    <span class="py-4 text-white text-xs" *ngIf="filterText.length>2">
+      {{filterText}} aradınız
+      </span>
+  </div>
+</div>

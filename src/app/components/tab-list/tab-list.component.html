@@ -1,0 +1,9 @@
+<div class="">
+  <div class="mt-5">
+    <ul class="tabs-items text-white flex justify-between text-[13px] my-7">
+      <li *ngFor="let tab of tabs" [class.active]="activeTab === tab.id" (click)="onTabChange(tab.id)">
+        {{ tab.label }}
+      </li>
+    </ul>
+  </div>
+</div>
