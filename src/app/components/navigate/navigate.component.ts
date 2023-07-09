@@ -9,9 +9,9 @@ import { MovieService } from '../../services/movie.service';
   styleUrls: ['./navigate.component.css'],
 })
 export class NavigateComponent implements OnInit {
-  @Input() title: string = '';
+  @Input() title = '';
   @Input() movie: MovieResult;
-  bookmarked: boolean = false;
+  bookmarked = false;
 
   constructor(
     private watchListService: WatchListService,

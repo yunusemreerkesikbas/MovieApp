@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { TopMoviesComponent } from './components/pages/home/top-movies/top-movies.component';
 import { TabListComponent } from './components/tab-list/tab-list.component';
@@ -31,11 +30,12 @@ import { SearchMovieComponent } from './components/pages/search-movie/search-mov
 import { MovieComponent } from './components/movie/movie.component';
 import { NoResultComponent } from './components/no-result/no-result.component';
 import { MovieRatingComponent } from './components/movie-info/movie-rating/movie-rating.component';
+import { NavbarMobileComponent } from './components/navbar/navbar-mobile/navbar-mobile.component';
+import { NavbarLaptopComponent } from './components/navbar/navbar-laptop/navbar-laptop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     SearchComponent,
     TopMoviesComponent,
     TabListComponent,
@@ -59,9 +59,12 @@ import { MovieRatingComponent } from './components/movie-info/movie-rating/movie
     MovieComponent,
     NoResultComponent,
     MovieRatingComponent,
+    NavbarMobileComponent,
+    NavbarLaptopComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgOptimizedImage,
     HttpClientModule,

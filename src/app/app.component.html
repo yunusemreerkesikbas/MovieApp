@@ -1,4 +1,12 @@
-  <app-header></app-header>
+<div class="container xs:px-6 py-6">
+  <div class="hidden md:block">
+    <app-navbar-laptop></app-navbar-laptop>
+  </div>
+  <div class="md:hidden">
+    <app-navbar-mobile></app-navbar-mobile>
+  </div>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
+</div>
+
 

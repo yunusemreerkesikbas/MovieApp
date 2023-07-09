@@ -1,22 +1,21 @@
 <div class="container mt-2">
-  <app-navigate [title]="'Watch List'" ></app-navigate>
-  <div class="watch-list--movie mt-5 py-3 flex flex-col gap-4">
-    <div class="movie--details flex gap-3" *ngFor="let movie of watchList">
-      <div class="movie-img w-[110px]">
-        <img [src]="getImageUrl(movie.poster_path)" alt="" />
+  <app-navigate [title]="'Watch List'"></app-navigate>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-5 py-3">
+    <div class="flex gap-3" *ngFor="let movie of watchList">
+      <div class="w-32">
+        <img [src]="getImageUrl(movie.poster_path)" alt="" class="object-cover w-full h-full" />
       </div>
-      <div class="description flex flex-col justify-between">
-        <div class="w-[90%]">
-          <div class="title leading-[23px]">
+      <div class="flex flex-col justify-between">
+        <div>
+          <div class="text-xl">
             <app-movie-title [title]="movie.title"></app-movie-title>
           </div>
         </div>
         <div class="flex flex-col justify-between gap-2 text-white text-xs">
           <app-movie-rating [rating]="movie.vote_average"></app-movie-rating>
-          <app-movie-genre [genres]="movie.genres" ></app-movie-genre>
+          <app-movie-genre [genres]="movie.genres"></app-movie-genre>
           <app-movie-release-date [release_date]="movie.release_date"></app-movie-release-date>
           <app-movie-runtime [runtime]="movie.runtime"></app-movie-runtime>
-
         </div>
       </div>
     </div>

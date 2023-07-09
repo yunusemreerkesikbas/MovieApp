@@ -9,6 +9,9 @@
 <div *ngIf="movies.length === 0 && filterText.trim() !== ''">
   <app-no-result></app-no-result>
 </div>
-<div class="container gap-4 " *ngFor="let movie of movies">
-  <app-movie [movie]="movie"></app-movie>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+  <div class="container gap-4 " *ngFor="let movie of movies">
+    <app-movie [movie]="movie"></app-movie>
+  </div>
 </div>
+

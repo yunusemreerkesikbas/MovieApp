@@ -6,7 +6,7 @@ import { MovieResult } from '../models/Movie';
   providedIn: 'root',
 })
 export class WatchListService {
-  watchList: MovieResult[] = [];
+  private watchList: MovieResult[] = [];
 
   constructor() {
     this.loadWatchList();
@@ -31,6 +31,10 @@ export class WatchListService {
     return this.watchList;
   }
 
+  isInWatchList(movieId: number): boolean {
+    return this.watchList.some((movie) => movie.id === movieId);
+  }
+
   private saveWatchList(): void {
     localStorage.setItem('watchList', JSON.stringify(this.watchList));
   }
@@ -40,9 +44,5 @@ export class WatchListService {
     if (storedWatchList) {
       this.watchList = JSON.parse(storedWatchList);
     }
-  }
-
-  isInWatchList(movieId: number): boolean {
-    return this.watchList.some((movie) => movie.id === movieId);
   }
 }

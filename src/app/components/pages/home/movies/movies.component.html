@@ -1,11 +1,9 @@
-<!-- movies.component.html -->
 <app-tab-list [tabs]="movieTabs" (tabChange)="tabChange($event)"></app-tab-list>
-<div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
   <div
-    class="tab-items-content-images w-full"
+    class="tab-items-content-images"
     *ngFor="let movie of movies[activeTab] | filterMovie : filterText"
   >
     <app-movie [movie]="movie"></app-movie>
   </div>
-
 </div>

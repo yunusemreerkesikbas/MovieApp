@@ -1,8 +1,8 @@
 <div class="container">
   <div class="cast flex justify-between flex-wrap gap-3">
-    <div *ngFor="let credit of credits" class="actor flex flex-col w-[150px]">
-      <div class="actor-image">
-        <img [src]="getImageUrl(credit.profile_path)" (error)="handleImageError($event)" class="max-sm:w-[150px] max-sm:h-[150px] max-sm:rounded-full max-sm:object-cover" alt="" />
+    <div *ngFor="let credit of credits" class="actor flex flex-col w-[150px] ">
+      <div class="actor-image flex justify-center items-center">
+        <img [src]="getImageUrl(credit.profile_path)" class="w-[150px] h-[150px] rounded-full object-cover" (error)="handleImageError($event)"  alt="" />
       </div>
       <div class="mt-5 text-white text-center" >
         {{credit.original_name}}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { MovieService } from '../../../../services/movie.service';
 import { MovieList, MovieRoot } from '../../../../models/Movie';
 import { ImageService } from '../../../../services/image.service';

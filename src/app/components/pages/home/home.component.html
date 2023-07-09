@@ -1,13 +1,11 @@
-<div class="container my-2">
+<div class="my-2">
   <h1 class="text-white text-xl">What do you want to watch?</h1>
 </div>
 <app-search (filterTextChange)="onFilterTextChange($event)"></app-search>
-<div class="container">
 
-  <app-top-movies [movies]="topMovies"></app-top-movies>
-  <app-movies
-    [movies]="movies"
-    [activeTab]="activeTab"
-    [filterText]="filterText"
-  ></app-movies>
-</div>
+<app-top-movies [movies]="topMovies"></app-top-movies>
+<app-movies
+  [movies]="movies"
+  [activeTab]="activeTab"
+  [filterText]="filterText"
+></app-movies>
