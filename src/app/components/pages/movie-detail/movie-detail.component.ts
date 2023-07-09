@@ -19,8 +19,7 @@ export class MovieDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
-    private imageService: ImageService,
-    private watchListService: WatchListService
+    private imageService: ImageService
   ) {}
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
