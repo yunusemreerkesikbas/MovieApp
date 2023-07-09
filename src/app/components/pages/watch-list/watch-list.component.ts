@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../../../services/movie.service';
-import { MovieResult } from '../../../models/Movie';
-import { WatchListService } from '../../../services/watchlist.service';
-import { ImageService } from '../../../services/image.service';
 import { forkJoin } from 'rxjs';
+import { MovieResult } from '@models/Movie';
+import { MovieService } from '@services/movie.service';
+import { ImageService } from '@services/image.service';
+import { WatchListService } from '@services/watchlist.service';
 
 @Component({
   selector: 'app-watch-list',

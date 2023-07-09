@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../../../services/movie.service';
-import { MovieList, MovieRoot } from '../../../models/Movie';
-import { Tab } from '../../../models/TabModel';
-
+import { Tab } from '@models/TabModel';
+import { MovieList, MovieRoot } from '@models/Movie';
+import { MovieService } from '@services/movie.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

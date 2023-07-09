@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Tab } from '../../models/TabModel';
+import { Tab } from '@models/TabModel';
 
 @Component({
   selector: 'app-tab-list',

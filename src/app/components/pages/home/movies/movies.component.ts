@@ -1,9 +1,8 @@
 // movies.component.ts
 import { Component, Input } from '@angular/core';
-import { Tab } from '../../../../models/TabModel';
-import { MovieService } from '../../../../services/movie.service';
-import { MovieList, MovieRoot } from '../../../../models/Movie';
-import { ImageService } from '../../../../services/image.service';
+import { MovieList } from '@models/Movie';
+import { Tab } from '@models/TabModel';
+import { ImageService } from '@services/image.service';
 
 @Component({
   selector: 'app-movies',

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MovieResult } from '../../../models/Movie';
 
 @Component({
   selector: 'app-movie-release-date',

@@ -1,7 +1,7 @@
 <div class="container xs:px-6content mt-7 flex flex-col">
   <div class="movie relative">
     <div>
-      <img [src]="getImageUrl(movie.backdrop_path)" class="w-full lg:h-[500px] object-cover" alt="" />
+      <img [ngSrc]="getImageUrl(movie.backdrop_path)" width="342" height="190" class="w-full lg:h-[500px] object-cover" alt="" />
     </div>
     <div class="rate-star absolute right-5 bottom-5 bg-[#25283652] p-2 rounded-lg backdrop-[10px]">
       <app-movie-rating [rating]="movie.vote_average" ></app-movie-rating>
@@ -10,7 +10,7 @@
   <div class="container relative h-[100px]">
     <div class="description flex justify-evenly gap-2 items-end">
       <div class="image absolute bottom-[25px] left-[50px]  lg:w-[200px] lg:h-[230px]">
-        <img [src]="getImageUrl(movie.poster_path)"  class=" xs:w-[100px] xs:h-[120px] object-cover" alt="" />
+        <img [ngSrc]="getImageUrl(movie.poster_path)" width="200" height="230" class=" xs:w-[100px] xs:h-[120px] object-cover" alt="" />
       </div>
       <div class="title w-[40%] lg:w-[60%] ml-[6rem] mt-5">
         <p class="text-white lg:text-2xl lg:font-bold">{{ movie.title }}</p>

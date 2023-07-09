@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { WatchListService } from '../../services/watchlist.service';
-import { MovieResult } from '../../models/Movie';
-import { MovieService } from '../../services/movie.service';
+import { MovieResult } from '@models/Movie';
+import { WatchListService } from '@services/watchlist.service';
+import { MovieService } from '@services/movie.service';
 
 @Component({
   selector: 'app-navigate',

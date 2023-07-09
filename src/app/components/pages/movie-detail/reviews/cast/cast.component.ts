@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Credits } from '../../../../../models/Credits';
-import { ImageService } from '../../../../../services/image.service';
+import { Credits } from '@models/Credits';
+import { ImageService } from '@services/image.service';
 
 @Component({
   selector: 'app-cast',

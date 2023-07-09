@@ -2,7 +2,7 @@
   <div class="content flex mt-5 gap-2 border-b border-solid border-[#3A3F47] py-3" *ngFor="let rw of review">
     <div class="user-info flex flex-col gap-3  items-center">
       <div class="user-avatar w-[50px] h-[50px] ">
-        <img [src]="getImageUrl(rw.author_details.avatar_path)" (error)="handleImageError($event)" class="object-cover w-[50px] h-[50px] rounded-full" alt="" />
+        <img [ngSrc]="getImageUrl(rw.author_details.avatar_path)" width="50" height="50" (error)="handleImageError($event)" class="object-cover rounded-full" alt="" />
       </div>
       <div class="rating">
         <span class="text-[#0296E5] text-sm">{{rw.author_details.rating}}</span>

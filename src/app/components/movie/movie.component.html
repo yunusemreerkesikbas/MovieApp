@@ -2,7 +2,7 @@
 <div class="movie row">
   <div class="col-md-3 mb-3" >
     <a href="" routerLink="/movie/{{ movie.id }}">
-      <img class="tab-items-content-img w-full object-cover" [src]="getImageUrl(movie.poster_path)" alt="" />
+      <img class="tab-items-content-img w-full object-cover" [ngSrc]="getImageUrl(movie.poster_path)" alt="" width="243" height="364"/>
     </a>
   </div>
 </div>

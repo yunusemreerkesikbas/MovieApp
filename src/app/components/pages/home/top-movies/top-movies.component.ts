@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { MovieService } from '../../../../services/movie.service';
-import { MovieList, MovieRoot } from '../../../../models/Movie';
-import { ImageService } from '../../../../services/image.service';
+import { Component, Input } from '@angular/core';
+import { MovieList } from '@models/Movie';
+import { ImageService } from '@services/image.service';
 
 @Component({
   selector: 'app-top-movies',

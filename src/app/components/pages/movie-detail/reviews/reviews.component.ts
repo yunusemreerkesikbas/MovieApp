@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Tab } from '../../../../models/TabModel';
-import { MovieResult, ReviewResult } from '../../../../models/Movie';
-import { Credits } from '../../../../models/Credits';
+import { MovieResult, ReviewResult } from '@models/Movie';
+import { Credits } from '@models/Credits';
+import { Tab } from '@models/TabModel';
 
 @Component({
   selector: 'app-reviews',

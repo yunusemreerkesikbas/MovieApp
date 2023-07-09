@@ -1,9 +1,9 @@
 // content.component.ts
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ImageService } from 'src/app/services/image.service';
-import { MovieResult, Genre } from '../../../../models/Movie';
-import { MovieService } from '../../../../services/movie.service';
+import { Genre, MovieResult } from '@models/Movie';
+import { MovieService } from '@services/movie.service';
+import { ImageService } from '@services/image.service';
 
 @Component({
   selector: 'app-content',

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { MovieList, MovieResult, MovieRoot, ReviewRoot } from '../models/Movie';
-import { environment } from '../../environments/environment';
-import { CreditsRoot } from '../models/Credits';
+import { MovieResult, MovieRoot, ReviewRoot } from '@models/Movie';
+import { CreditsRoot } from '@models/Credits';
+import { environment } from '@environments/environment';
 
 @Injectable({
   providedIn: 'root',

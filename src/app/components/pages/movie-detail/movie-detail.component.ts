@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Tab } from '../../../models/TabModel';
+import { Genre, MovieResult, ReviewResult } from '@models/Movie';
+import { Credits } from '@models/Credits';
 import { ActivatedRoute } from '@angular/router';
-import { MovieService } from '../../../services/movie.service';
-import { ImageService } from '../../../services/image.service';
-import {
-  Genre,
-  MovieResult,
-  ReviewResult,
-  ReviewRoot,
-} from '../../../models/Movie';
-import { Credits } from '../../../models/Credits';
-import { WatchListService } from '../../../services/watchlist.service';
+import { MovieService } from '@services/movie.service';
+import { ImageService } from '@services/image.service';
+import { WatchListService } from '@services/watchlist.service';
 
 @Component({
   selector: 'app-movie-detail',
