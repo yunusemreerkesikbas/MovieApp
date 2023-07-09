@@ -4,7 +4,6 @@ import { Credits } from '@models/Credits';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '@services/movie.service';
 import { ImageService } from '@services/image.service';
-import { WatchListService } from '@services/watchlist.service';
 
 @Component({
   selector: 'app-movie-detail',
