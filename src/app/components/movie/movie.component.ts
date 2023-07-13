@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MovieList } from '@models/Movie';
 import { ImageService } from '@services/image.service';
+import { MovieListModel } from '@models/movieListModel';
 
 @Component({
   selector: 'app-movie',
@@ -8,7 +8,7 @@ import { ImageService } from '@services/image.service';
   styleUrls: ['./movie.component.css'],
 })
 export class MovieComponent implements OnInit {
-  @Input() movie: MovieList;
+  @Input() movie: MovieListModel;
   @Input() filterText: string = '';
   constructor(private imageService: ImageService) {}
 

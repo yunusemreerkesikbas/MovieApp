@@ -1,8 +1,8 @@
 // movies.component.ts
 import { Component, Input } from '@angular/core';
-import { MovieList } from '@models/Movie';
-import { Tab } from '@models/TabModel';
+import { Tab } from '@models/tabModel';
 import { ImageService } from '@services/image.service';
+import { MovieListModel } from '@models/movieListModel';
 
 @Component({
   selector: 'app-movies',
@@ -12,7 +12,7 @@ import { ImageService } from '@services/image.service';
 export class MoviesComponent {
   @Input() activeTab: string = 'now_playing';
   @Input() filterText: string = '';
-  @Input() movies: { [key: string]: MovieList[] };
+  @Input() movies: { [key: string]: MovieListModel[] };
 
   movieTabs: Tab[] = [
     { id: 'popular', label: 'Popular' },

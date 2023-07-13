@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MovieList } from '@models/Movie';
 import { MovieService } from '@services/movie.service';
+import { MovieListModel } from '@models/movieListModel';
 
 @Component({
   selector: 'app-search-movie',
@@ -9,7 +9,7 @@ import { MovieService } from '@services/movie.service';
 })
 export class SearchMovieComponent {
   filterText = '';
-  movies: MovieList[] = [];
+  movies: MovieListModel[] = [];
   isSearching = false;
   title: 'Search Movie';
 

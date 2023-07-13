@@ -1,30 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Tab } from '@models/TabModel';
-import { MovieList, MovieRoot } from '@models/Movie';
 import { MovieService } from '@services/movie.service';
+import { MovieListModel, MovieRoot } from '@models/movieListModel';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  homeTabs: Tab[] = [
-    { id: 'now-playing', label: 'Now Playing' },
-    { id: 'upcoming', label: 'Upcoming' },
-    { id: 'top-rated', label: 'Top Rated' },
-    { id: 'popular', label: 'Popular' },
-  ];
   activeTab = 'popular';
   filterText = '';
-  topMovies: MovieList[];
-  movies: { [key: string]: MovieList[] } = {
+  topMovies: MovieListModel[];
+  movies: { [key: string]: MovieListModel[] } = {
     popular: [],
     top_rated: [],
     now_playing: [],
     upcoming: [],
   };
-  filteredMovies: MovieList[] = [];
-  isSearching = false;
 
   constructor(private movieService: MovieService) {}
 

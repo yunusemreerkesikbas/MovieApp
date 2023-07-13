@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
-import { MovieResult } from '@models/Movie';
+import { MovieResult } from '@models/movieModel';
 import { MovieService } from '@services/movie.service';
 import { ImageService } from '@services/image.service';
 import { WatchListService } from '@services/watchlist.service';
@@ -34,14 +34,6 @@ export class WatchListComponent implements OnInit {
       this.watchList = responses;
       console.log('watchlist', this.watchList);
     });
-  }
-
-  removeFromWatchList(movieId: string): void {
-    const numericMovieId = parseInt(movieId, 10);
-    this.watchListService.removeFromWatchList(numericMovieId);
-    this.watchList = this.watchList.filter(
-      (movie) => movie.id !== numericMovieId
-    );
   }
 
   getImageUrl(posterPath: string): string {

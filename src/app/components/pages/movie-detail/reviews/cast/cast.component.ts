@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Credits } from '@models/Credits';
+import { ReviewModel } from '@models/reviewModel';
 import { ImageService } from '@services/image.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { ImageService } from '@services/image.service';
   styleUrls: ['./cast.component.css'],
 })
 export class CastComponent implements OnInit {
-  @Input() credits: Credits[];
+  @Input() credits: ReviewModel[];
   constructor(private imageService: ImageService) {}
 
   ngOnInit(): void {}

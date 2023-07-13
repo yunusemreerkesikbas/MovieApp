@@ -1,7 +1,7 @@
 // content.component.ts
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Genre, MovieResult } from '@models/Movie';
+import { Genre, MovieResult } from '@models/movieModel';
 import { MovieService } from '@services/movie.service';
 import { ImageService } from '@services/image.service';
 
@@ -13,7 +13,6 @@ import { ImageService } from '@services/image.service';
 export class ContentComponent implements OnInit {
   @Input() movie: MovieResult;
   @Input() genres: Genre[];
-  posterImageUrl: string;
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,

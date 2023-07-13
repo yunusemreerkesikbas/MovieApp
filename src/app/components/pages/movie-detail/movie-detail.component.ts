@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Genre, MovieResult, ReviewResult } from '@models/Movie';
-import { Credits } from '@models/Credits';
+import { Genre, MovieResult } from '@models/movieModel';
+import { ReviewModel, ReviewResult } from '@models/reviewModel';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '@services/movie.service';
 import { ImageService } from '@services/image.service';
@@ -14,7 +14,7 @@ export class MovieDetailComponent implements OnInit {
   movie: MovieResult;
   genres: Genre[];
   reviews: ReviewResult[];
-  credits: Credits[];
+  credits: ReviewModel[];
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,

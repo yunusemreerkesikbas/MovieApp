@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { MovieList } from '@models/Movie';
 import { ImageService } from '@services/image.service';
+import { MovieListModel } from '@models/movieListModel';
 
 @Component({
   selector: 'app-top-movies',
@@ -9,7 +9,7 @@ import { ImageService } from '@services/image.service';
 })
 export class TopMoviesComponent {
   constructor(private imageService: ImageService) {}
-  @Input() movies: MovieList[];
+  @Input() movies: MovieListModel[];
 
   getImageUrl(posterPath: string) {
     return this.imageService.getImageUrl(posterPath);

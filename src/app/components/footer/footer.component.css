@@ -12,9 +12,7 @@ a.active p {
   color: #0296E5;
 }
 
-.link-icon {
-  @apply text-white h-8 w-8;
-}
+
 
 .footer {
   @apply  border-t border-blue-500;

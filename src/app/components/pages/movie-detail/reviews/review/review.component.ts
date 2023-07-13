@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ReviewResult } from '@models/Movie';
 import { ImageService } from '@services/image.service';
+import { ReviewResult } from '@models/reviewModel';
 
 @Component({
   selector: 'app-review',

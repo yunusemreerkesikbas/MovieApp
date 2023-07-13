@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MovieResult, ReviewResult } from '@models/Movie';
-import { Credits } from '@models/Credits';
-import { Tab } from '@models/TabModel';
+import { ReviewModel, ReviewResult } from '@models/reviewModel';
+import { Tab } from '@models/tabModel';
+import { MovieResult } from '@models/movieModel';
 
 @Component({
   selector: 'app-reviews',
@@ -13,7 +13,7 @@ export class ReviewsComponent implements OnInit {
 
   @Input() reviews: ReviewResult[];
   @Input() aboutMovie: MovieResult;
-  @Input() credits: Credits[];
+  @Input() credits: ReviewModel[];
 
   movieDetailTabs: Tab[] = [
     { id: 'about-movie', label: 'About Movie' },

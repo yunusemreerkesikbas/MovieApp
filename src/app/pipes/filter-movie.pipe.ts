@@ -1,15 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { MovieList } from '../models/Movie';
+import { MovieListModel } from '@models/movieListModel';
 
 @Pipe({
   name: 'filterMovie',
 })
 export class FilterMoviePipe implements PipeTransform {
-  transform(value: MovieList[], filterText: string): MovieList[] {
+  transform(value: MovieListModel[], filterText: string): MovieListModel[] {
     filterText = filterText ? filterText.toLocaleLowerCase() : '';
     return filterText
       ? value.filter(
-          (p: MovieList) =>
+          (p: MovieListModel) =>
             p.title.toLocaleLowerCase().indexOf(filterText) !== -1
         )
       : value;
