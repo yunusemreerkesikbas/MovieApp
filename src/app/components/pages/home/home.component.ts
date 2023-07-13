@@ -16,15 +16,18 @@ export class HomeComponent implements OnInit {
     now_playing: [],
     upcoming: [],
   };
+  isLoading: boolean = false;
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.getTopMovies();
     this.getMoviesByCategory('popular');
     this.getMoviesByCategory('top_rated');
     this.getMoviesByCategory('now_playing');
     this.getMoviesByCategory('upcoming');
+    this.isLoading = false;
   }
 
   getTopMovies(): void {

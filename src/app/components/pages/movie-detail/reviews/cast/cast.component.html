@@ -2,7 +2,7 @@
   <div class="cast flex justify-between flex-wrap gap-3">
     <div *ngFor="let credit of credits" class="actor flex flex-col w-[150px] h-[150px] ">
       <div class="actor-image flex justify-center items-center">
-        <img [ngSrc]="getImageUrl(credit.profile_path)"  width="150" height="150" class=" rounded-full object-cover" (error)="handleImageError($event)" alt="" />
+        <img [ngSrc]="getImageUrl(credit.profile_path)"  width="150" height="150" class=" rounded-full object-cover w-[100px] h-[100px]" (error)="handleImageError($event)" alt="" />
       </div>
       <div class="mt-5 text-white text-center" >
         {{credit.original_name}}

@@ -12,7 +12,7 @@ export class SearchMovieComponent {
   movies: MovieListModel[] = [];
   isSearching = false;
   title: 'Search Movie';
-
+  isLoading = false;
   constructor(private movieService: MovieService) {}
 
   onFilterTextChange(filterText: string) {
@@ -21,9 +21,11 @@ export class SearchMovieComponent {
   }
 
   onSearch() {
+    this.isLoading = true;
     if (this.filterText.trim() === '') {
       this.movies = [];
       this.isSearching = false;
+      this.isLoading = false;
       return;
     }
 
@@ -34,5 +36,6 @@ export class SearchMovieComponent {
         this.movies = response.results;
         console.log(this.movies);
       });
+    this.isLoading = false;
   }
 }

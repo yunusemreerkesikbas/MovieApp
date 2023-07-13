@@ -32,6 +32,7 @@ import { MovieRatingComponent } from '@components/movie-info/movie-rating/movie-
 import { NavbarMobileComponent } from '@components/navbar/navbar-mobile/navbar-mobile.component';
 import { NavbarLaptopComponent } from '@components/navbar/navbar-laptop/navbar-laptop.component';
 import { NgOptimizedImage } from '@angular/common';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { NgOptimizedImage } from '@angular/common';
     MovieRatingComponent,
     NavbarMobileComponent,
     NavbarLaptopComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
