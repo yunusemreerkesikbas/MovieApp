@@ -2,8 +2,6 @@
   background: #242A32;
 }
 
-
-
 a {
   @apply text-blue-500 opacity-50;
 }

@@ -9,7 +9,9 @@ import { MovieListModel } from '@models/movieListModel';
 })
 export class MovieComponent implements OnInit {
   @Input() movie: MovieListModel;
-  @Input() filterText: string = '';
+  @Input() filterText: string;
+  @Input() width: number = 137;
+  @Input() height: number = 206;
   constructor(private imageService: ImageService) {}
 
   ngOnInit(): void {}
