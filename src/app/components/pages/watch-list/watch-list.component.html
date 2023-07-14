@@ -2,9 +2,9 @@
   <app-navigate [title]="'Watch List'"></app-navigate>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-5 py-3">
     <div class="flex gap-3" *ngFor="let movie of watchList">
-      <div class="w-40">
-        <img [ngSrc]="getImageUrl(movie.poster_path)" width="150" height="230" alt="" class="object-cover " />
-      </div>
+      <a class="w-[150px]" routerLink="/movie/{{ movie.id }}">
+        <img [ngSrc]="getImageUrl(movie.poster_path)" width="137" height="206" alt="" class="object-cover " />
+      </a>
       <div class="flex flex-col justify-between">
         <div>
           <div class="text-xl">
