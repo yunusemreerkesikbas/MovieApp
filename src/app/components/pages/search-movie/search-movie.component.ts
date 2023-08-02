@@ -34,7 +34,6 @@ export class SearchMovieComponent {
       .searchMovies(this.filterText)
       .subscribe((response: any) => {
         this.movies = response.results;
-        console.log(this.movies);
       });
     this.isLoading = false;
   }

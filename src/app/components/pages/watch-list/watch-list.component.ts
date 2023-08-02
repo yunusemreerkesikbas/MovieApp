@@ -32,7 +32,6 @@ export class WatchListComponent implements OnInit {
 
     forkJoin(requests).subscribe((responses: MovieResult[]) => {
       this.watchList = responses;
-      console.log('watchlist', this.watchList);
     });
   }
 

@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
   getTopMovies(): void {
     this.movieService.getTopMovies().subscribe((response) => {
       this.topMovies = response.results;
-      console.log(this.topMovies);
     });
   }
 

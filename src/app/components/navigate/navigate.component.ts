@@ -36,7 +36,6 @@ export class NavigateComponent implements OnInit {
       .getMovieDetails(movieId.toString())
       .subscribe((response: MovieResult) => {
         this.watchListService.addToWatchList(response);
-        console.log('watchliste eklendi');
       });
   }
 
